@@ -1,0 +1,19 @@
+task clean {
+    doLast {
+        println 'Executing clean task'
+    }
+}
+
+
+task compile {
+    doLast {
+        println 'Executing compile task'
+    }
+}
+compile.dependsOn 'clean'
+
+task ("package", dependsOn : 'compile') {
+    doLast {
+        println 'Executing package task'
+    }
+}
