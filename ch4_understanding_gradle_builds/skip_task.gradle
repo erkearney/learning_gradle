@@ -1,0 +1,14 @@
+/* Demonstrates how to skip tasks in Gradle using the onlyIf closure. Run once
+without any command-line arguments, and again with -Penv=Prod to see. */
+task skipInProd {
+    onlyIf {
+        !project.hasProperty('env') || project.env != "Prod"
+    }
+    //enabled = !project.hasProperty('env') || project.env != "Prod"
+    // ^^ the onlyIf closure can be substitued entirely with this line.
+
+    doLast {
+        println 'Task execution complete'
+    }
+    
+}
