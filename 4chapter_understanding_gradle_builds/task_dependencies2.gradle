@@ -1,0 +1,25 @@
+/* When determining what order to run tasks, Gradle generates a Directed 
+Acyclic Graph (DAG), where each task to be executed becomes a node in the 
+graph. In a DAG, it's impossible to arrive at the same node twice, which means
+that Gradle will never execute a task that has already been executed; even if
+a single task is 'depended on' more than once. */
+task A {
+    doLast {
+        println 'In task A'
+    }
+}
+
+task B {
+    doLast {
+        println 'In task B'
+    }
+}
+
+task C {
+    doLast {
+        println 'In task C'
+    }
+}
+
+A.dependsOn 'C'
+B.dependsOn 'C'
