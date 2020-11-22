@@ -1,2 +1,0 @@
-apply plugin: HelloPlugin
-apply plugin: HelloPlugin2
