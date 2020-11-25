@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ivy-module version="2.0" xmlns:m="http://ant.apache.org/ivy/maven">
-  <info organisation="" module="sample-app" revision="1.0" status="integration" publication="20201124160700"/>
+  <info organisation="com.apress.gradle.intro" module="sample-app" revision="1.0-SNAPSHOT" status="integration" publication="20201124175910"/>
   <configurations>
     <conf name="annotationProcessor" visibility="private"/>
     <conf name="apiElements" visibility="private" extends="runtime"/>
@@ -26,4 +26,7 @@
   <publications>
     <artifact name="sample-app" type="jar" ext="jar" conf="apiElements,archives,runtime,runtimeElements"/>
   </publications>
+  <dependencies>
+    <dependency org="ch.qos.logback" name="logback-classic" rev="1.1.2" conf="compile-&gt;default"/>
+  </dependencies>
 </ivy-module>

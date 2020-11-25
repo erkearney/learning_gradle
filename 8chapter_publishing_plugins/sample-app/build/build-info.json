@@ -1,0 +1,34 @@
+{
+  "version" : "1.0.1",
+  "name" : "sample-app",
+  "number" : "1606345118839",
+  "buildAgent" : {
+    "name" : "Gradle",
+    "version" : "6.5.1"
+  },
+  "agent" : {
+    "name" : "Gradle",
+    "version" : "6.5.1"
+  },
+  "started" : "2020-11-25T15:58:38.834-0700",
+  "durationMillis" : 14,
+  "principal" : "e",
+  "artifactoryPrincipal" : "admin",
+  "artifactoryPluginVersion" : "Unknown",
+  "vcs" : [ ],
+  "licenseControl" : {
+    "runChecks" : false,
+    "includePublishedArtifacts" : false,
+    "autoDiscover" : false,
+    "scopesList" : "",
+    "licenseViolationsRecipientsList" : ""
+  },
+  "governance" : {
+    "blackDuckProperties" : {
+      "runChecks" : false,
+      "includePublishedArtifacts" : false,
+      "autoCreateMissingComponentRequests" : false,
+      "autoDiscardStaleComponentRequests" : false
+    }
+  }
+}
